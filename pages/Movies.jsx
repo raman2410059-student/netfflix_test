@@ -10,7 +10,7 @@ function Movies() {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await movieService.getMovies()
+        const response = await movieService.getAllMovies()
         if (response) {
           setMovies(response.documents)
         }

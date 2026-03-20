@@ -1,4 +1,3 @@
-import React from 'react'
 import {Client, Account, ID, Databases} from 'appwrite'
 import conf from '../Conf/conf';
 
@@ -54,7 +53,7 @@ export class AuthServices {
 
   async logout() {
     try {
-      return await this .account.deleteSessions()
+      return await this.account.deleteSessions()
     } catch (error) {
       throw error;
     }
