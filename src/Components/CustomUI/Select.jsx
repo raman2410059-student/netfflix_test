@@ -12,6 +12,7 @@ const Select = forwardRef(function Select({
         {label && <label
         htmlFor={id}
         className='text-sm text-gray-300 font-medium'>
+            {label}
             </label>}
 
          <select
@@ -26,7 +27,7 @@ const Select = forwardRef(function Select({
           transition-all duration-200
           focus:outline-none
           focus:ring-2 focus:ring-red-600
-          focus:border-red-600${className}`}
+          focus:border-red-600 ${className}`}
          {...props}>
             {options?.map((option) => (
                 <option key={option} value={option}>

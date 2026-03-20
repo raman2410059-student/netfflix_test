@@ -1,4 +1,3 @@
-import React from 'react'
 import {Client, Account, ID, Databases, Storage, Query} from "appwrite"
 import conf from '../Conf/conf'
 
