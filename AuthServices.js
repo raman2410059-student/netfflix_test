@@ -43,9 +43,11 @@ export class AuthServices {
 
   async login({email, password}) {
     try {
-
-  await this.account.deleteSessions();
-
+      await this.account.deleteSessions();
+    } catch (_error) {
+      // No active session to delete; safe to proceed
+    }
+    try {
       return await this.account.createEmailPasswordSession(email, password);
     } catch (error) {
       throw error;
